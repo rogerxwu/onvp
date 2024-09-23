@@ -1,5 +1,7 @@
 # Open Network Visualization Platform (ONVP)
+![Build&Test Workflow](https://github.com/rogerxwu/onvp/actions/workflows/ci.yaml/badge.svg)
 ![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow)
+
 
 <p align="center">
   <img src="docs/media/screenshots/home.png" width="600" alt="ONVP user interface screenshot" />
