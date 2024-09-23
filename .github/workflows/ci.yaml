@@ -27,7 +27,7 @@ jobs:
 
       # Step 4: Build and bring up Docker Compose services
       - name: Build and run Docker Compose
-        run: docker-compose -f docker-compose.yml up -d --build MODE=prod
+        run: MODE=prod docker-compose -f docker-compose.yml up -d --build
 
       # Step 5: Verify services are up and running
       - name: Check running services
