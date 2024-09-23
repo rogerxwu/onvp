@@ -16,6 +16,9 @@ The Open Network Visualization Platform (ONVP) is a web application designed to 
 - Static Data Source Input: ONVP seamlessly integrates static data source files as input, ensuring compatibility with pre-existing network data and offering the ability to quickly load and visualize network information.
 - Time-Based Topology Rendering: ONVP includes a feature to render network diagrams based on collected datetime data, allowing users to observe and compare topology changes over time. This makes it easier to track network evolution and quickly spot any alterations in the network's structure between different time periods.
 
+## Usage
+
+ONVP accept two data sources static file or api. For static file, replace the data in public/networkData.json. For API, place the API in components/network_diagram.js.
 
 ## Installation
 1. Install docker, docker compose, node.js>20 before you run the following cmds
