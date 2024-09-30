@@ -1,14 +1,58 @@
 version: '3.8'
 services:
   app:
+    container_name: onvp-controller
     build:
-      context: .
+      context: ./controller
       # MODE=[dev | prod] docker compose up -d --build 
       target: $MODE
       dockerfile: Dockerfile
     volumes:
-        - .:/app
+        - ./controller:/app
         - /app/node_modules
         - /app/.next
     ports:
       - "3000:3000"
+    networks:
+      - onvp_network
+
+  fastapi:
+    container_name: onvp-api
+    build: 
+      context: ./api-server
+    ports:
+      - "8000:80"
+    networks:
+      - onvp_network
+
+  etcd:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: onvp-db
+    environment:
+      - ETCD_DATA_DIR=/etcd-data
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://localhost:2379
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://localhost:2380
+      - ETCD_INITIAL_CLUSTER=default=http://localhost:2380
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster-1
+      - ETCD_INITIAL_CLUSTER_STATE=new
+      - ETCD_HEARTBEAT_INTERVAL=100
+      - ETCD_ELECTION_TIMEOUT=1000
+    volumes:
+      - data:/etcd-data
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    networks:
+      - onvp_network
+
+
+volumes:
+  data:
+
+networks:
+  onvp_network:
+    driver: bridge

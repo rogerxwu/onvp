@@ -1,0 +1,33 @@
+# Dockerfile
+
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y curl && apt-get clean
+
+# Install Poetry
+ENV POETRY_HOME="/opt/poetry"
+#ENV POETRY_VERSION="1.8.0"  # Use the latest version or the version you prefer
+ENV PATH="$POETRY_HOME/bin:$PATH"
+
+RUN curl -sSL https://install.python-poetry.org | python3 - && \
+    poetry --version  # Verify Poetry installation
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the poetry files first and install dependencies
+COPY pyproject.toml poetry.lock /app/
+
+# Install dependencies using Poetry
+RUN poetry install --no-root --only main
+
+# Copy the rest of the application code
+COPY . /app
+
+# Expose the application port
+EXPOSE 80
+
+# Run uvicorn server on container startup
+CMD ["poetry", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]

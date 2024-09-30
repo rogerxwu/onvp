@@ -1,0 +1,398 @@
+{
+    "leaf-1": {
+        "Ethernet1/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "leaf-2": {
+        "Ethernet1/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "leaf-3": {
+        "Ethernet1/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet1/3",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet1/3",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "leaf-4": {
+        "Ethernet1/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet1/4",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet1/4",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "spine-1": {
+        "Ethernet1/1": [
+            {
+                "hostname": "leaf-1",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.1",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "leaf-2",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.2",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/3": [
+            {
+                "hostname": "leaf-3",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.3",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/4": [
+            {
+                "hostname": "leaf-4",
+                "port": "Ethernet1/1",
+                "management_address": "192.168.1.4",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/1": [
+            {
+                "hostname": "border-router-1",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.2.1",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "border-router-2",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.2.2",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "spine-2": {
+        "Ethernet1/1": [
+            {
+                "hostname": "leaf-1",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.1",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/2": [
+            {
+                "hostname": "leaf-2",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.2",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/3": [
+            {
+                "hostname": "leaf-3",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.3",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet1/4": [
+            {
+                "hostname": "leaf-4",
+                "port": "Ethernet1/2",
+                "management_address": "192.168.1.4",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/1": [
+            {
+                "hostname": "border-router-1",
+                "port": "Ethernet2/2",
+                "management_address": "192.168.2.1",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "border-router-2",
+                "port": "Ethernet2/2",
+                "management_address": "192.168.2.2",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ]
+    },
+    "border-router-1": {
+        "Ethernet2/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/3": [
+            {
+                "hostname": "provider-edge-1",
+                "port": "Ethernet2/1",
+                "management_address": "10.0.0.1",
+                "system_description": "Cisco ASR 9000 6.6.3 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/4": [
+            {
+                "hostname": "provider-edge-2",
+                "port": "Ethernet2/1",
+                "management_address": "10.0.0.2",
+                "system_description": "Cisco ASR 9000 6.6.3 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ]
+    },
+    "border-router-2": {
+        "Ethernet2/1": [
+            {
+                "hostname": "spine-1",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.1.10",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "spine-2",
+                "port": "Ethernet2/1",
+                "management_address": "192.168.1.11",
+                "system_description": "Nexus 9000 10.1(2) software",
+                "capabilities": [
+                    "bridge",
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/3": [
+            {
+                "hostname": "provider-edge-1",
+                "port": "Ethernet2/2",
+                "management_address": "10.0.0.1",
+                "system_description": "Cisco ASR 9000 6.6.3 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/4": [
+            {
+                "hostname": "provider-edge-2",
+                "port": "Ethernet2/2",
+                "management_address": "10.0.0.2",
+                "system_description": "Cisco ASR 9000 6.6.3 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ]
+    },
+    "provider-edge-1": {
+        "Ethernet2/1": [
+            {
+                "hostname": "border-router-1",
+                "port": "Ethernet2/3",
+                "management_address": "192.168.2.1",
+                "system_description": "Cisco ASR 1000 16.9.5 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "border-router-2",
+                "port": "Ethernet2/3",
+                "management_address": "192.168.2.2",
+                "system_description": "Cisco ASR 1000 16.9.5 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ]
+    },
+    "provider-edge-2": {
+        "Ethernet2/1": [
+            {
+                "hostname": "border-router-1",
+                "port": "Ethernet2/3",
+                "management_address": "192.168.2.1",
+                "system_description": "Cisco ASR 1000 16.9.5 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ],
+        "Ethernet2/2": [
+            {
+                "hostname": "border-router-2",
+                "port": "Ethernet2/4",
+                "management_address": "192.168.2.2",
+                "system_description": "Cisco ASR 1000 16.9.5 software",
+                "capabilities": [
+                    "router"
+                ]
+            }
+        ]
+    }
+}
