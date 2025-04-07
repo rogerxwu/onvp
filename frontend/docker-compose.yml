@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  app:
+  frontend:
     build:
       context: .
       # MODE=[dev | prod] docker compose up -d --build 

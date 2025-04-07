@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    extends:
+      file: frontend/docker-compose.yml
+      service: frontend
+    networks:
+      - my_shared_network
+
+  backend:
+    extends:
+      file: backend/docker-compose.yml
+      service: backend
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    driver: bridge
