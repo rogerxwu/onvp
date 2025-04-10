@@ -1,0 +1,11 @@
+/* Sidebar styles */
+
+
+
+.sidebar .nav-link {
+  color: white;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #434a53;
+}

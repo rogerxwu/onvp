@@ -19,26 +19,14 @@ const NetworkDiagram = () => {
 
   // Fetch the data from the JSON file or database when the component mounts
   useEffect(() => {
-    if (dataSource === 'static') {
-      fetch('/networkData.json')
-        .then(response => response.json())
-        .then(data => {
-          setNetworkData(data);
-          setSelectedTime(data[0]?.datetime); // Set initial selection
-          setFilteredElements([...data[0]?.nodes, ...data[0]?.edges]); // Set initial elements (nodes + edges)
-        })
-        .catch(error => console.error('Error fetching network data:', error));
-    } else if (dataSource === 'database') {
-      // Simulate a fetch from a MySQL database
-      fetch('/api/getNetworkDataFromDatabase') // Example API route
-        .then(response => response.json())
-        .then(data => {
-          setNetworkData(data);
-          setSelectedTime(data[0]?.datetime); // Set initial selection
-          setFilteredElements([...data[0]?.nodes, ...data[0]?.edges]); // Set initial elements (nodes + edges)
-        })
-        .catch(error => console.error('Error fetching network data from database:', error));
-    }
+    fetch('./networkData.json')
+      .then(response => response.json())
+      .then(data => {
+        setNetworkData(data);
+        setSelectedTime(data[0]?.datetime); // Set initial selection
+        setFilteredElements([...data[0]?.nodes, ...data[0]?.edges]); // Set initial elements (nodes + edges)
+      })
+      .catch(error => console.error('Error fetching network data:', error));
   }, [dataSource]);
 
   // Update the network diagram when the selected time changes
@@ -147,7 +135,7 @@ const NetworkDiagram = () => {
             setDataSource={setDataSource}
           />
         </div>
-        
+
         {networkData.length > 0 && (
           <TimeSelector
             selectedTime={selectedTime}
