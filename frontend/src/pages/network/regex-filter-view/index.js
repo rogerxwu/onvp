@@ -1,10 +1,9 @@
 "use client";
-// app/visualization/page.js
-import { useEffect, useState } from 'react';
-import NetworkDiagram from '../../components/network_diagram'
-import Layout from '../../components/Layout/Layout';
+import React, { useEffect, useState } from 'react';
+import NetworkDiagram from '@components/network_diagram';
+import { RootLayout } from '@components/Layout';
 
-export default function NetworkPage() {
+export default function RegexFilterView() {
     const [dimensions, setDimensions] = useState({
         width: 0,
         height: 0
@@ -32,16 +31,30 @@ export default function NetworkPage() {
     }, []);
 
     return (
-
         <div style={{ width: '100%', height: '100%' }}>
             <NetworkDiagram />
         </div>
-
     );
-}
+};
 
-NetworkPage.getLayout = function getLayout(page) {
+// Define the layout configuration
+RegexFilterView.getLayout = function getLayout(page) {
+    const sidebarContent = [
+        {
+            link: '/network/backbone-view',
+            label: 'Backbone View'
+        },
+        {
+            link: '/network/datacenter-view',
+            label: 'Data Center View'
+        },
+        {
+            link: '/network/regex-filter-view',
+            label: 'Regex Filter View'
+        }
+    ];
+
     return (
-        <Layout>{page}</Layout>
+        <RootLayout sidebarContent={sidebarContent}>{page}</RootLayout>
     )
 }

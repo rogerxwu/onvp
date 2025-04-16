@@ -2,35 +2,29 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import cytoscape from 'cytoscape';
-import DataSourceSelector from './data_source_selector'; // Import data source selector
 import NodeFilter from './node_filter'; // Import node filter component
-import TimeSelector from './time_selector'; // Import time selector component
 import CurveStyleSwitcher from './curve_style_switcher'; // Import curve style switcher component
 
 
 const NetworkDiagram = () => {
   const cyRef = useRef(null);
-  const [networkData, setNetworkData] = useState([]);
-  const [selectedTime, setSelectedTime] = useState('');
   const [selectedData, setSelectedData] = useState(null);
-  const [dataSource, setDataSource] = useState('static');
   const [filteredElements, setFilteredElements] = useState([]);
   const [curveStyle, setCurveStyle] = useState('bezier')
 
   // Fetch the data from the JSON file or database when the component mounts
   useEffect(() => {
-    fetch('./networkData.json')
+    fetch('../networkData.json')
       .then(response => response.json())
       .then(data => {
-        setNetworkData(data);
-        setSelectedTime(data[0]?.datetime); // Set initial selection
+        setSelectedData(data);
         setFilteredElements([...data[0]?.nodes, ...data[0]?.edges]); // Set initial elements (nodes + edges)
       })
       .catch(error => console.error('Error fetching network data:', error));
-  }, [dataSource]);
+  }, []);
 
   // Update the network diagram when the selected time changes
-  useEffect(() => {
+  /* useEffect(() => {
     if (selectedTime && networkData.length > 0) {
       const dataForTime = networkData.find(item => item.datetime === selectedTime);
       setSelectedData(dataForTime);
@@ -38,7 +32,7 @@ const NetworkDiagram = () => {
       // Reset the filtered elements when a new time is selected
       setFilteredElements([...dataForTime.nodes, ...dataForTime.edges]);
     }
-  }, [selectedTime, networkData]);
+  }, [selectedTime, networkData]); */
 
   // Update the Cytoscape diagram when filteredElements change
   useEffect(() => {
@@ -129,20 +123,20 @@ const NetworkDiagram = () => {
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       {/* Data Source, Time Selection, and Node Filter in Same Row */}
       <div style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1, display: 'flex', alignItems: 'center', gap: '20px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
           <DataSourceSelector
             dataSource={dataSource}
             setDataSource={setDataSource}
           />
-        </div>
+        </div> */}
 
-        {networkData.length > 0 && (
+        {/* {networkData.length > 0 && (
           <TimeSelector
             selectedTime={selectedTime}
             networkData={networkData}
             setSelectedTime={setSelectedTime}
           />
-        )}
+        )} */}
 
         {selectedData && (
           <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -153,6 +147,7 @@ const NetworkDiagram = () => {
             />
           </div>
         )}
+
         <CurveStyleSwitcher
           curveStyle={curveStyle}
           setCurveStyle={setCurveStyle} // Pass the curve style setter

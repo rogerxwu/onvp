@@ -4,7 +4,10 @@ import styles from "../../styles/Layout.module.css"
 import Sidebar from '../SideBar/Sidebar';
 
 
-const Layout = ({ children }) => {
+const RootLayout = ({ children, sidebarContent }) => {
+  if (!sidebarContent) {
+    console.error("Sidebar content is undefined!");
+  }
 
   return (
     <div className={styles.layout}>
@@ -14,7 +17,7 @@ const Layout = ({ children }) => {
       <div className={styles.content} >
         {/* SideBar */}
         <div className={styles.sidebar}>
-          <Sidebar />
+          <Sidebar sidebarContent={sidebarContent} />
         </div>
         {/* Main Content */}
         <div className={styles.mainContent}>
@@ -25,4 +28,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default RootLayout;

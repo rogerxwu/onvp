@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Layout from '../../components/Layout/Layout';
+import { RootLayout } from '@components/Layout';
 
 const Flow = () => {
     // State to store the response message
@@ -31,23 +31,6 @@ const Flow = () => {
     return (
         <div>
             <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
-            <h1>FastAPI Hello World Example</h1>
 
             {loading && <p>Loading...</p>} {/* Show loading text while waiting */}
 
@@ -63,6 +46,6 @@ export default Flow;
 
 Flow.getLayout = function getLayout(page) {
     return (
-        <Layout>{page}</Layout>
+        <RootLayout>{page}</RootLayout>
     )
 }

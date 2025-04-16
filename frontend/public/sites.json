@@ -1,0 +1,104 @@
+{
+    "sites": [
+        {
+            "id": 1,
+            "name": "New York DC",
+            "status": "active",
+            "region": "US East",
+            "location": {
+                "lat": 40.7128,
+                "lng": -74.0060
+            }
+        },
+        {
+            "id": 2,
+            "name": "Virginia DC",
+            "status": "active",
+            "region": "US East",
+            "location": {
+                "lat": 38.8048,
+                "lng": -77.0433
+            }
+        },
+        {
+            "id": 3,
+            "name": "Georgia DC",
+            "status": "maintenance",
+            "region": "US East",
+            "location": {
+                "lat": 33.7490,
+                "lng": -84.3880
+            }
+        },
+        {
+            "id": 4,
+            "name": "California DC",
+            "status": "active",
+            "region": "US West",
+            "location": {
+                "lat": 37.7749,
+                "lng": -122.4194
+            }
+        },
+        {
+            "id": 5,
+            "name": "Oregon DC",
+            "status": "active",
+            "region": "US West",
+            "location": {
+                "lat": 45.5152,
+                "lng": -122.6784
+            }
+        },
+        {
+            "id": 6,
+            "name": "Washington DC",
+            "status": "maintenance",
+            "region": "US West",
+            "location": {
+                "lat": 47.6062,
+                "lng": -122.3321
+            }
+        },
+        {
+            "id": 7,
+            "name": "London DC",
+            "status": "active",
+            "region": "EU",
+            "location": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            }
+        },
+        {
+            "id": 8,
+            "name": "Frankfurt DC",
+            "status": "active",
+            "region": "EU",
+            "location": {
+                "lat": 50.1109,
+                "lng": 8.6821
+            }
+        },
+        {
+            "id": 9,
+            "name": "Paris DC",
+            "status": "maintenance",
+            "region": "EU",
+            "location": {
+                "lat": 48.8566,
+                "lng": 2.3522
+            }
+        },
+        {
+            "id": 10,
+            "name": "Amsterdam DC",
+            "status": "active",
+            "region": "EU",
+            "location": {
+                "lat": 52.3676,
+                "lng": 4.9041
+            }
+        }
+    ]
+}

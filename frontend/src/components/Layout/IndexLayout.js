@@ -1,7 +1,6 @@
 
 import CustomNavbar from '../NavBar/CustomNavbar';
 import styles from "../../styles/Layout.module.css"
-import Sidebar from '../SideBar/Sidebar';
 
 
 const IndexLayout = ({ children }) => {
@@ -11,12 +10,9 @@ const IndexLayout = ({ children }) => {
             {/* NavBar */}
             <CustomNavbar />
             {/* Content */}
-            <div className={styles.content} >
-
+            <div className={styles.indexContent} >
                 {/* Main Content */}
-                <div className={styles.mainContent}>
-                    {children}
-                </div>
+                {children}
             </div>
         </div>
     );

@@ -1,0 +1,104 @@
+{
+    "dataCenters": [
+        {
+            "id": 1,
+            "name": "New York DC",
+            "location": [
+                40.7128,
+                -74.0060
+            ],
+            "status": "active",
+            "region": "US East"
+        },
+        {
+            "id": 2,
+            "name": "Virginia DC",
+            "location": [
+                38.8048,
+                -77.0433
+            ],
+            "status": "active",
+            "region": "US East"
+        },
+        {
+            "id": 3,
+            "name": "Georgia DC",
+            "location": [
+                33.7490,
+                -84.3880
+            ],
+            "status": "maintenance",
+            "region": "US East"
+        },
+        {
+            "id": 4,
+            "name": "California DC",
+            "location": [
+                37.7749,
+                -122.4194
+            ],
+            "status": "active",
+            "region": "US West"
+        },
+        {
+            "id": 5,
+            "name": "Oregon DC",
+            "location": [
+                45.5155,
+                -122.6783
+            ],
+            "status": "active",
+            "region": "US West"
+        },
+        {
+            "id": 6,
+            "name": "Washington DC",
+            "location": [
+                47.6062,
+                -122.3321
+            ],
+            "status": "maintenance",
+            "region": "US West"
+        },
+        {
+            "id": 7,
+            "name": "London DC",
+            "location": [
+                51.5074,
+                -0.1278
+            ],
+            "status": "active",
+            "region": "EU"
+        },
+        {
+            "id": 8,
+            "name": "Frankfurt DC",
+            "location": [
+                50.1109,
+                8.6821
+            ],
+            "status": "active",
+            "region": "EU"
+        },
+        {
+            "id": 9,
+            "name": "Paris DC",
+            "location": [
+                48.8566,
+                2.3522
+            ],
+            "status": "maintenance",
+            "region": "EU"
+        },
+        {
+            "id": 10,
+            "name": "Amsterdam DC",
+            "location": [
+                52.3676,
+                4.9041
+            ],
+            "status": "active",
+            "region": "EU"
+        }
+    ]
+}

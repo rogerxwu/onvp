@@ -1,0 +1,123 @@
+/* Sidebar styles */
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-right: 1px solid #dee2e6;
+    z-index: 900;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    margin: 0;
+    padding: 0;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.navLink:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.navIcon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.navLink span {
+    font-size: 0.9rem;
+}
+
+/* Sites Container Styles */
+.sitesContainer {
+    padding: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.sitesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.siteItem {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siteName {
+    font-weight: 500;
+    color: #333;
+}
+
+.siteStatus {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.siteStatus[data-status="active"] {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.siteStatus[data-status="maintenance"] {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.error {
+    text-align: center;
+    color: #dc3545;
+    padding: 20px;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: auto;
+        max-height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+.sidebar .nav-link {
+  color: white;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #434a53;
+}

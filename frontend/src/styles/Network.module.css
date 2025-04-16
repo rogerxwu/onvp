@@ -1,0 +1,72 @@
+.networkContainer {
+  padding: 20px;
+  height: calc(100vh - 100px);
+}
+
+.networkCard {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cardBody {
+  padding: 0;
+  height: calc(100% - 60px);
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Custom marker styles */
+:global(.custom-marker) {
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+:global(.custom-marker.maintenance) {
+  background-color: #ffc107;
+}
+
+:global(.marker-content) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup styles */
+:global(.leaflet-popup-content) {
+  margin: 10px;
+}
+
+:global(.leaflet-popup-content h3) {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+:global(.leaflet-popup-content p) {
+  margin: 5px 0;
+  font-size: 0.9rem;
+} 
